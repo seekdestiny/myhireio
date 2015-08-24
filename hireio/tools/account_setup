@@ -1,0 +1,1 @@
+CREATE USER 'hireio_admin'@'localhost' IDENTIFIED BY 'hireioadmin08222015';GRANT ALL PRIVILEGES ON *.* TO 'hireio_admin'@'localhost' WITH GRANT OPTION;
