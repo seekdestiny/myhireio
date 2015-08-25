@@ -1,0 +1,21 @@
+{
+    "js": {
+        "global_js": [
+            "js/external/jquery-2.1.4.min.js",
+            "js/external/underscore.js",
+            "js/external/underscore.string.js",
+            "js/external/underscore.mixins.js",
+            "js/external/backbone-min.js"
+        ],
+
+        "recruiters": {
+        }
+    },
+    "css": {
+        "global_css": [
+        ],
+        "recruiters": [
+            "css/recruiters/register.css"
+        ]
+    }
+}
