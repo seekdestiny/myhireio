@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'recruiters',
+    'candidates',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,12 +52,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'hireio.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
