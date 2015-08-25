@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 
 <html>
-    <h1>
-        <title>Hello</title>
-    </h1>
+    <head>
+        {% load loader %}
+    </head>
+    <body>
+        <div>user name: <input class="account_id" type=text/></div>
+        <div>password: <input class="account_password" type=text/></div>
+        <button class="register_account_button">register</button>
+        <button>cancel</button>
+    </body>
 </html>
+
+{% load_js_bundle "recruiters" %}
+{% load_css_bundle "recruiters" %}

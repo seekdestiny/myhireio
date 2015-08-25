@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'recruiters',
     'candidates',
+    'loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -72,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'hireio.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
@@ -101,6 +101,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATICFILES_DIRS = (
+    os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'static')),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
