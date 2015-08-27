@@ -5,10 +5,22 @@
         {% load loader %}
     </head>
     <body>
-        <div>user name: <input class="account_id" type=text/></div>
-        <div>password: <input class="account_password" type=text/></div>
-        <button class="register_account_button">register</button>
-        <button>cancel</button>
+        <form id="registration" method="post" action="register">
+            {% csrf_token %}
+            <p>
+                {{ form.username.label_tag }}<br />
+                {{ form.username }}
+            </p>
+            <p>
+                {{ form.email.label_tag }}<br />
+                {{ form.email }}
+            </p>
+            <p>
+                {{ form.password.label_tag }}<br />
+                {{ form.password }}
+            </p>
+            <input type="submit" value="Sign up">
+        </form>
     </body>
 </html>
 
