@@ -26,6 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_PROFILE_MODULE = 'account.Profile'
 
 # Application definition
 
@@ -36,8 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'recruiters',
-    'candidates',
+    'account',
     'loader',
 )
 
