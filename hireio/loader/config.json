@@ -14,8 +14,10 @@
     "css": {
         "global_css": [
         ],
-        "recruiters": [
-            "css/recruiters/register.css"
+        "jobs": [
+            "less/jobs/new_job.css",
+            "less/jobs/job_post.css",
+            "less/jobs/job_detail.css"
         ]
     }
 }
