@@ -8,16 +8,24 @@
             "js/external/backbone-min.js"
         ],
 
-        "recruiters": {
-        }
+        "recruiters": [
+        ],
+
+        "jobs": [
+            "js/jobs/bootstrap.js"
+        ]
     },
     "css": {
         "global_css": [
         ],
+
         "jobs": [
             "less/jobs/new_job.css",
             "less/jobs/job_post.css",
             "less/jobs/job_detail.css"
+        ],
+
+        "recruiters": [
         ]
     }
 }
