@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% load loader %}
+    </head>
+    <body>
+        <form id="create_jobs" method="post" action="create_company">
+            {% csrf_token %}
+            <p>
+                {{ form.name.label_tag }}<br/>
+                {{ form.name }}
+                {% for error in form.name.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.tag_name.label_tag }}<br/>
+                {{ form.tag_name }}
+                {% for error in form.tag_name.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.product.label_tag }}<br/>
+                {{ form.product }}
+                {% for error in form.product.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.why_us.label_tag }}<br/>
+                {{ form.why_us }}
+                {% for error in form.why_us.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.traction.label_tag }}<br/>
+                {{ form.traction }}
+                {% for error in form.traction.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.funding.label_tag }}<br/>
+                {{ form.funding }}
+                {% for error in form.funding.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.size.label_tag }}<br/>
+                {{ form.size }}
+                {% for error in form.size.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.market.label_tag }}<br/>
+                {{ form.market }}
+                {% for error in form.market.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.company_link.label_tag }}<br/>
+                {{ form.company_link }}
+                {% for error in form.company_link.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <input type="submit" value="Add company">
+        </form>
+    </body>
+</html>

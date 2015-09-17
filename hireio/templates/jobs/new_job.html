@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% load loader %}
+        {% load_css_bundle "jobs" %}
+    </head>
+    <body>
+        <form id="create_jobs" method="post" action="create_job">
+            {% csrf_token %}
+            <p>
+                {{ form.company.label_tag }}<br/>
+                {{ form.company }}
+                {% for error in form.company.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.description.label_tag }}<br/>
+                {{ form.description }}
+                {% for error in form.description.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.responsibility.label_tag }}<br/>
+                {{ form.responsibility }}
+                {% for error in form.responsibility.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.requirements.label_tag }}<br/>
+                {{ form.requirements }}
+                {% for error in form.requirements.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.skills.label_tag }}<br/>
+                {{ form.skills }}
+                {% for error in form.skills.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.location.label_tag }}<br/>
+                {{ form.location }}
+                {% for error in form.location.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.salary.label_tag }}<br/>
+                {{ form.salary }}
+                {% for error in form.salary.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.equity.label_tag }}<br/>
+                {{ form.equity }}
+                {% for error in form.equity.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.job_type.label_tag }}<br/>
+                {{ form.job_type }}
+                {% for error in form.job_type.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.job_title.label_tag }}<br/>
+                {{ form.job_title }}
+                {% for error in form.job_title.errors %}<span class="error">{{ error }}</span>{% endfor %}
+            </p>
+            <input type="submit" value="Add job">
+        </form>
+    </body>
+</html>

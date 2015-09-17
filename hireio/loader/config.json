@@ -5,14 +5,17 @@
             "js/external/underscore.js",
             "js/external/underscore.string.js",
             "js/external/underscore.mixins.js",
-            "js/external/backbone-min.js"
+            "js/external/backbone-min.js",
+            "js/base/base.js"
         ],
 
         "recruiters": [
         ],
 
         "jobs": [
-            "js/jobs/bootstrap.js"
+            "js/jobs/bootstrap.js",
+            "js/jobs/dashboard.js",
+            "js/jobs/job_detail.js"
         ]
     },
     "css": {
