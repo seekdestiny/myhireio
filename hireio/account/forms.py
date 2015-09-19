@@ -40,3 +40,7 @@ class LoginForm(forms.Form):
             attrs = {}
         ),
     )
+
+class UploadResumeForm(forms.Form):
+    title = forms.CharField(label='title', max_length=100)
+    resume = forms.FileField()

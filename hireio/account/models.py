@@ -10,3 +10,10 @@ class Profile(models.Model):
             profile, created = Profile.objects.get_or_create(user=instance)
 
     post_save.connect(create_user_profile, sender=User)
+
+class Resume(models.Model):
+    user = models.ForeignKey(User)
+
+    title = models.CharField(max_length=100, blank=False)
+    resume = models.FileField()
+

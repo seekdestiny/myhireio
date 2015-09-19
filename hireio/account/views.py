@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import render
 
 from account import forms
+from account import models
 
 def recruiter_register(request):
     if request.method == 'GET':
@@ -66,3 +67,32 @@ def show_login_page(request):
             'form': form,
         },
     )
+
+def upload_resume(request):
+    if request.method == 'POST':
+        form = forms.UploadResumeForm(request.POST, request.FILES)
+        if form.is_valid():
+            resume = models.Resume(file_field=request.FILES['file'])
+            resume.save()
+
+            return render(
+                request,
+                'landing_pages/index.html',
+            )
+        else:
+            return render(
+            request,
+            'account/upload_resume.html',
+            {
+                'form': form,
+            }
+        )
+    else:
+        form = forms.UploadResumeForm()
+        return render(
+            request,
+            'account/upload_resume.html',
+            {
+                'form': form,
+            }
+        )
