@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib import auth
 from django.contrib.auth.models import User
 from django.shortcuts import render
 
@@ -47,10 +47,11 @@ def login(request):
 
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password')
-        user = authenticate(username=username, password=password)
+        user = auth.authenticate(username=username, password=password)
         if user is None:
             return show_login_page(request)
 
+        auth.login(request, user)
         return render(
             request,
             'landing_pages/index.html',
@@ -72,7 +73,11 @@ def upload_resume(request):
     if request.method == 'POST':
         form = forms.UploadResumeForm(request.POST, request.FILES)
         if form.is_valid():
-            resume = models.Resume(resume=request.FILES['resume'])
+            resume = models.Resume(
+                resume=request.FILES['resume'],
+                title=form.cleaned_data.get('title'),
+                user=request.user,
+            )
             resume.save()
 
             return render(
