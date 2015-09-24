@@ -72,7 +72,7 @@ def upload_resume(request):
     if request.method == 'POST':
         form = forms.UploadResumeForm(request.POST, request.FILES)
         if form.is_valid():
-            resume = models.Resume(file_field=request.FILES['file'])
+            resume = models.Resume(resume=request.FILES['resume'])
             resume.save()
 
             return render(
