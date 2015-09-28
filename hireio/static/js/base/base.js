@@ -2,7 +2,6 @@ _.namespace('hio.base', function(ns) {
     "use strict";
 
     ns.hio_base_view = Backbone.View.extend({
-        el: 'body',
 
         initialize: function() {
         },
@@ -32,7 +31,12 @@ _.namespace('hio.base', function(ns) {
                     callback();
                 }
             });
-        },
+        }
+
+    });
+
+    ns.hio_app = Backbone.View.extend({
+        el: '.hireio_body',
 
         goto: function(view) {
             var previous = this.currentPage || null;
@@ -45,7 +49,7 @@ _.namespace('hio.base', function(ns) {
             }
 
             next.render();
-            this.$el.append(next.$el);
+            $('.hireio_body').append(next.$el);
             next.transitionIn();
             this.currentPage = next;
         }

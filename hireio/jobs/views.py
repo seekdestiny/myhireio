@@ -4,6 +4,7 @@ from models import Company, JobPost
 from datetime import datetime
 from django.core.serializers import serialize
 from django.http import JsonResponse
+from django.core.exceptions import ObjectDoesNotExist
 import json
 from django.http import HttpResponse
 
@@ -103,6 +104,8 @@ def dashboard(request):
 
 def load_more_companies(request):
     company_models = Company.objects.order_by('last_active')
+    if not company_models:
+        return HttpResponse(json.dumps([]), content_type="application/json")
 
     start = int(request.GET.get('index', 0))
     end = start + 10

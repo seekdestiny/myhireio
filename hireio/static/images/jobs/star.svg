@@ -1,0 +1,27 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+width="300px"  height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+
+    <defs>
+        <linearGradient id="grad">
+            <stop offset="0%"  stop-color="red"/>
+            <stop offset="0%" stop-color="transparent"/>
+        </linearGradient>
+    </defs>
+    <g>
+        <g >
+            <path fill="url(#grad)" stroke="#eacd63000000" id="circle1im" stroke-width="0.5" stroke-miterlimit="10" d="
+                M 180.000 199.000
+                L 209.389 220.451
+                L 198.070 185.871
+                L 227.553 164.549
+                L 191.168 164.629
+                L 180.000 130.000
+                L 168.832 164.629
+                L 132.447 164.549
+                L 161.930 185.871
+                L 150.611 220.451
+                L 180.000 199.000
+            "/>
+        </g>
+    </g>
+</svg>

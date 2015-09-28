@@ -5,7 +5,7 @@
             "js/external/underscore.js",
             "js/external/underscore.string.js",
             "js/external/underscore.mixins.js",
-            "js/external/backbone-min.js",
+            "js/external/backbone.js",
             "js/base/base.js"
         ],
 
@@ -23,9 +23,11 @@
         ],
 
         "jobs": [
+            "less/base/base.css",
             "less/jobs/new_job.css",
             "less/jobs/job_post.css",
-            "less/jobs/job_detail.css"
+            "less/jobs/job_detail.css",
+            "less/jobs/dashboard.css"
         ],
 
         "recruiters": [

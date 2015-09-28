@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+.hireio_wrapper {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.hireio_wrapper .hireio_title_wrapper {
+  width: 1150px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 20px;
+  position: relative;
+  display: block;
+}
+.hireio_wrapper .hireio_title_wrapper .logo {
+  display: inline-block;
+  color: #4f99c4;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.hireio_wrapper .hireio_title_wrapper .navigation_section {
+  display: inline-block;
+  float: right;
+}
+.hireio_wrapper .hireio_title_wrapper .navigation_section .button {
+  display: inline;
+  font-family: Quicksand;
+}
+.hireio_wrapper .hireio_title_wrapper .navigation_section .button.navigate {
+  color: #333333;
+}
+.hireio_wrapper .hireio_title_wrapper .navigation_section .button.selected {
+  color: #ebebeb;
+}
+.hireio_wrapper .hireio_title_wrapper .navigation_section .account_management_section {
+  display: inline-block;
+}

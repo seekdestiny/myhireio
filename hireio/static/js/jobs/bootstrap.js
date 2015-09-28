@@ -11,7 +11,7 @@ _.namespace('hio.jobs', function(ns) {
             Router: null,
 
             init: function() {
-                this.instance = new hio.base.hio_base_view();
+                this.instance = new hio.base.hio_app();
                 return this;
             }
         };

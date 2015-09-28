@@ -40,7 +40,7 @@ class JobPost(models.Model):
 
     def serialize(self):
         return {
-            'description': str(self.description),
+            'description': str(self.description.encode('ascii', 'ignore')),
             'requirements': str(self.requirements),
             'skills': str(self.skills),
             'location': str(self.location),

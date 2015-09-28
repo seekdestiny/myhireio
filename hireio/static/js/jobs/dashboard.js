@@ -2,6 +2,7 @@ _.namespace('hio.jobs.views', function(ns) {
     'use strict';
 
     ns.Dashboard = hio.base.hio_base_view.extend({
+
         events: {
             'click .job_title': 'show_job_detail'
         },
@@ -18,8 +19,8 @@ _.namespace('hio.jobs.views', function(ns) {
 
         render_company_row: function(companies) {
             _.each(companies, function(company) {
-                var template = _.template($('#tpl_company_row').html());
-                this.$('#company_list_wrapper').append(template({'company': company}));
+                var template = _.template($('#tpl_company_info').html());
+                this.$('#company_list').append(template({'company': company}));
             }, this);
         },
 
