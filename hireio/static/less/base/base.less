@@ -13,6 +13,7 @@ body {
 
     .hireio_title_wrapper {
         width: 1150px;
+        height: 37px;
         margin: auto;
         left: 0;
         right: 0;
@@ -30,11 +31,13 @@ body {
 
         .navigation_section {
             display: inline-block;
+            position: relative;
             float: right;
 
             .button {
-                display: inline;
+                display: inline-block;
                 font-family: Quicksand;
+                margin-right: 35px;
 
                 &.navigate {
                     color: @navigate_button_color;
@@ -43,10 +46,37 @@ body {
                 &.selected {
                     color: @selected_button_color;
                 }
+
+            }
+
+            .page_navigate_section {
+                position: relative;
+                display: inline-block;
             }
 
             .account_management_section {
                 display: inline-block;
+
+                .login {
+                    position: relative;
+                    width: 74px;
+                    height: 35px;
+                    line-height: 35px;
+                    border: 1px solid #cccccc;
+                    border-radius: 3px;
+                    text-align: center;
+                    margin-right: 30px;
+                }
+
+                .signup {
+                    position: relative;
+                    border: 1px solid #357ebc;
+                    border-radius: 3px;
+                    width: 74px;
+                    height: 35px;
+                    line-height: 35px;
+                    text-align: center;
+                }
             }
         }
     }

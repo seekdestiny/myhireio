@@ -8,6 +8,7 @@ body {
 }
 .hireio_wrapper .hireio_title_wrapper {
   width: 1150px;
+  height: 37px;
   margin: auto;
   left: 0;
   right: 0;
@@ -24,11 +25,13 @@ body {
 }
 .hireio_wrapper .hireio_title_wrapper .navigation_section {
   display: inline-block;
+  position: relative;
   float: right;
 }
 .hireio_wrapper .hireio_title_wrapper .navigation_section .button {
-  display: inline;
+  display: inline-block;
   font-family: Quicksand;
+  margin-right: 35px;
 }
 .hireio_wrapper .hireio_title_wrapper .navigation_section .button.navigate {
   color: #333333;
@@ -36,6 +39,29 @@ body {
 .hireio_wrapper .hireio_title_wrapper .navigation_section .button.selected {
   color: #ebebeb;
 }
+.hireio_wrapper .hireio_title_wrapper .navigation_section .page_navigate_section {
+  position: relative;
+  display: inline-block;
+}
 .hireio_wrapper .hireio_title_wrapper .navigation_section .account_management_section {
   display: inline-block;
+}
+.hireio_wrapper .hireio_title_wrapper .navigation_section .account_management_section .login {
+  position: relative;
+  width: 74px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  text-align: center;
+  margin-right: 30px;
+}
+.hireio_wrapper .hireio_title_wrapper .navigation_section .account_management_section .signup {
+  position: relative;
+  border: 1px solid #357ebc;
+  border-radius: 3px;
+  width: 74px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
 }
