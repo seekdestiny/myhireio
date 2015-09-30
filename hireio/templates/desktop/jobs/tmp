@@ -1,0 +1,27 @@
+        <div class="company_name"><%= company.name  %></div>
+        <div class="company_tag_name"><%= company.tag_name %></div>
+        <div class="company_product"><%= company.product %></div>
+        <div class="company_why_us"><%= company.why_us %></div>
+        <div class="company_traction"><%= company.traction %></div>
+        <div class="company_funding"><%= company.funding %></div>
+        <div class="company_size"><%= company.size %></div>
+        <div class="company_last_active"><%= company.last_active %></div>
+        <div class="company_market"><%= company.market %></div>
+        <div class="company_company_link"><%= company.company_link %></div>
+
+        <div class="jobs_wrapper">
+            <% _.each(company.jobs, function(job) { %>
+                <div class="job_wrapper">
+                    <div class="job_title" data-id=<%= job.id %>><%= job.job_title %></div>
+                    <div><%= job.description %></div>
+                    <div><%= job.requirements %></div>
+                    <div><%= job.skills %></div>
+                    <div><%= job.location %></div>
+                    <div><%= job.salary %></div>
+                    <div><%= job.equity %></div>
+                    <div><%= job.job_type %></div>
+                    <div><%= job.responsibility %></div>
+                </div>
+            <% }); %>
+        </div>
+

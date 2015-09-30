@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% load loader %}
+        {% load_css_bundle "jobs" %}
+    </head>
+    <body>
+        <div class="job_post_wrapper">
+            {% if job_post.job_title %}
+                <div class="title">
+                    {{ job_post.job_title }} @ {{ job_post.company.name }}
+                </div>
+            {% endif %}
+            {% if job_post.description %}
+                <div class="info_wrapper">
+                    <div class="subtitle">Product</div>
+                    <div class="description">{{ job_post.description }}</div>
+                </div>
+            {% endif %}
+            {% if job_post.requirements %}
+                <div class="info_wrapper">
+                    <div class="subtitle">Requirements</div>
+                    <div class="description">{{ job_post.requirements }}</div>
+                </div>
+            {% endif %}
+            {% if job_post.skills %}
+                <div class="info_wrapper">
+                    <div class="subtitle">Skills</div>
+                    <div class="description">{{ job_post.skills }}</div>
+                </div>
+            {% endif %}
+            {% if job_post.location %}
+                <div class="info_wrapper">
+                    <div class="subtitle">Location</div>
+                    <div class="description">{{ job_post.location }}</div>
+                </div>
+            {% endif %}
+            {% if job_post.salary %}
+                <div class="info_wrapper">
+                    <div class="subtitle">Salary</div>
+                    <div class="description">{{ job_post.salary }}</div>
+                </div>
+            {% endif %}
+            {% if job_post.equity %}
+                <div class="info_wrapper">
+                    <div class="subtitle">Equity</div>
+                    <div class="description">{{ job_post.equity }}</div>
+                </div>
+            {% endif %}
+            {% if job_post.job_type %}
+                <div class="info_wrapper">
+                    <div class="subtitle">Type</div>
+                    <div class="description">{{ job_post.job_type }}</div>
+                </div>
+            {% endif %}
+            {% if job_post.responsibility %}
+                <div class="info_wrapper">
+                    <div class="subtitle">Responsibility</div>
+                    <div class="description">{{ job_post.responsibility }}</div>
+                </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
