@@ -9,9 +9,9 @@ import json
 from django.http import HttpResponse
 
 def create_job(request):
-    template = 'jobs/new_job.html'
+    template = 'desktop/jobs/new_job.html'
     if request.method == 'GET':
-        template = 'jobs/new_job.html'
+        template = 'desktop/jobs/new_job.html'
         form = JobPostForm()
         return render(
             request,
@@ -39,7 +39,7 @@ def create_job(request):
             job_post.save()
             return render(
                 request,
-                'landing_pages/index.html',
+                'desktop/landing_pages/index.html',
             )
         else:
             return render(
@@ -52,7 +52,7 @@ def create_job(request):
 
 def job_detail(request):
     if request.method == 'GET':
-        template = 'jobs/job_detail.html'
+        template = 'desktop/jobs/job_detail.html'
         job_id = int(request.GET.get('job_id', ''))
         if not job_id:
             job_post = None
@@ -62,7 +62,7 @@ def job_detail(request):
 
 def create_company(request):
     if request.method == 'GET':
-        template = 'jobs/new_company.html'
+        template = 'desktop/jobs/new_company.html'
         form = CompanyForm()
         return render(
             request,
@@ -90,12 +90,12 @@ def create_company(request):
 
             return render(
                 request,
-                'landing_pages/index.html',
+                'desktop/landing_pages/index.html',
             )
 
 def dashboard(request):
     if request.method == 'GET':
-        template = 'jobs/dashboard.html'
+        template = 'desktop/jobs/dashboard.html'
 
         return render(
             request,
