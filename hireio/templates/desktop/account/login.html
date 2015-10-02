@@ -1,21 +1,18 @@
-<!DOCTYPE html>
+{% extends 'desktop/base.html' %}
 
-<html>
-    <head>
-        {% load loader %}
-    </head>
-    <body>
-        <form id="login" method="post" action="login">
-            {% csrf_token %}
-            <p>
-                {{ form.username.label_tag }}<br />
-                {{ form.username }}
-            </p>
-            <p>
-                {{ form.password.label_tag }}<br />
-                {{ form.password }}
-            </p>
-            <input type="submit" value="Log in">
-        </form>
-    </body>
-</html>
+{% block head %}
+    
+{% block head %}
+
+<form id="login" method="post" action="login">
+    {% csrf_token %}
+    <p>
+        {{ form.username.label_tag }}<br />
+        {{ form.username }}
+    </p>
+    <p>
+        {{ form.password.label_tag }}<br />
+        {{ form.password }}
+    </p>
+    <input type="submit" value="Log in">
+</form>

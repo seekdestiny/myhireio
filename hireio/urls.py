@@ -20,6 +20,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^account/', include('account.urls')),
     url(r'^jobs/', include('jobs.urls')),
+    url(r'^talents/', include('talents.urls')),
+    url(r'^events/', include('events.urls')),
 ]
 
 #if settings.DEBUG:

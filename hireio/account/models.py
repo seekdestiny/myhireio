@@ -5,14 +5,23 @@ from django.core.files.storage import FileSystemStorage
 
 fs = FileSystemStorage(location='resumes/')
 
-class Profile(models.Model):
+class Talent(models.Model):
     user = models.OneToOneField(User)
 
-    def create_user_profile(sender, instance, created, **kwargs):
+    def create_talent(sender, instance, created, **kwargs):
         if created:
-            profile, created = Profile.objects.get_or_create(user=instance)
+            talent, created = Talent.objects.get_or_create(user=instance)
 
-    post_save.connect(create_user_profile, sender=User)
+    post_save.connect(create_talent, sender=User)
+
+class Recruiter(models.Model):
+    user = models.OneToOneField(User)
+
+    def create_recruiter(sender, instance, created, **kwargs):
+        if created:
+            recruiter, created = Recruiter.objects.get_or_create(user=instance)
+
+    post_save.connect(create_recruiter, sender=User)
 
 class Resume(models.Model):
     user = models.ForeignKey(User)

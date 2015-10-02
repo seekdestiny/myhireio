@@ -5,17 +5,29 @@
             "js/external/underscore.js",
             "js/external/underscore.string.js",
             "js/external/underscore.mixins.js",
-            "js/external/backbone.js",
-            "js/base/base.js"
+            "js/external/backbone.js"
         ],
 
         "recruiters": [
         ],
 
         "jobs": [
-            "js/jobs/bootstrap.js",
-            "js/jobs/dashboard.js",
-            "js/jobs/job_detail.js"
+            "js/desktop/base/base.js",
+            "js/desktop/jobs/bootstrap.js",
+            "js/desktop/jobs/dashboard.js",
+            "js/desktop/jobs/job_detail.js"
+        ],
+
+        "talents": [
+            "js/desktop/base/base.js",
+            "js/desktop/talents/talent_list.js",
+            "js/desktop/talents/bootstrap.js"
+        ],
+
+        "events": [
+            "js/desktop/base/base.js",
+            "js/desktop/events/event_list.js",
+            "js/desktop/events/bootstrap.js"
         ]
     },
     "css": {
@@ -23,14 +35,21 @@
         ],
 
         "jobs": [
-            "less/base/base.css",
-            "less/jobs/new_job.css",
-            "less/jobs/job_post.css",
-            "less/jobs/job_detail.css",
-            "less/jobs/dashboard.css"
+            "less/desktop/base/base.css",
+            "less/desktop/jobs/new_job.css",
+            "less/desktop/jobs/job_post.css",
+            "less/desktop/jobs/job_detail.css",
+            "less/desktop/jobs/dashboard.css"
         ],
 
-        "recruiters": [
+        "talents": [
+            "less/desktop/base/base.css",
+            "less/desktop/talents/talent_list.css"
+        ],
+
+        "events": [
+            "less/desktop/base/base.css",
+            "less/desktop/events/event_list.css"
         ]
     }
 }

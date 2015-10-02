@@ -1,12 +1,12 @@
-from forms import CompanyForm, JobPostForm
 from django.shortcuts import render
-from models import Company, JobPost
-from datetime import datetime
-from django.core.serializers import serialize
-from django.http import JsonResponse
-from django.core.exceptions import ObjectDoesNotExist
-import json
 from django.http import HttpResponse
+
+from datetime import datetime
+
+from forms import CompanyForm, JobPostForm
+from models import Company, JobPost
+
+import json
 
 def create_job(request):
     template = 'desktop/jobs/new_job.html'
@@ -100,6 +100,9 @@ def dashboard(request):
         return render(
             request,
             template,
+            {
+                'tab': 'companies',
+            }
         )
 
 def load_more_companies(request):

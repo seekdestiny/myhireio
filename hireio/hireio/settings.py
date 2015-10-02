@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'account',
     'loader',
     'jobs',
+    'talents',
+    'events',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -101,3 +101,4 @@ def upload_resume(request):
                 'form': form,
             }
         )
+

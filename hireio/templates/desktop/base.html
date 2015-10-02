@@ -12,8 +12,12 @@
                 <div class="logo">HireIO</div>
                 <div class="navigation_section">
                     <div class="page_navigate_section">
-                        <div class="companies button navigate selected">Talens</div>
-                        <div class="talents button navigate">Talens</div>
+                        <a href="/jobs/">
+                            <div class="companies button navigate {% if tab == "companies" %}selected{% endif %}">Companies</div>
+                        </a>
+                        <a href="/talents/">
+                            <div class="talents button navigate {% if tab == "talents" %}selected{% endif %}">Talents</div>
+                        </a>
                         <div class="about button navigate">About us</div>
                         <div class="events button navigate">Events</div>
                         <div class="blog button navigate">Blog</div>
