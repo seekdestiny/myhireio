@@ -1,0 +1,22 @@
+{% extends 'desktop/base.html' %}
+
+{% block head %}
+    <script type="text/template" id="tpl_talent_list_wrapper">
+        <div>This is the talent list view</div>
+    </script>
+
+    {% load loader %}
+    {% load_css_bundle "talents" %}
+    {% load_js_bundle "talents" %}
+{% endblock %}
+
+{% block body %}
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            $(function() {
+                hio.talents.bootstrap();
+            });
+        });
+    </script>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends 'desktop/base.html' %}
+
+{% block head %}
+    <script type="text/template" id="tpl_event_list_wrapper">
+        <div>This is the event list view</div>
+    </script>
+
+    {% load loader %}
+    {% load_css_bundle "events" %}
+    {% load_js_bundle "events" %}
+{% endblock %}
+
+{% block body %}
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            $(function() {
+                hio.events.bootstrap();
+            });
+        });
+    </script>
+{% endblock %}
+

@@ -1,0 +1,167 @@
+@section_divider: #ebebeb;
+@page_width: 1150px;
+
+#company_list_wrapper {
+    width: 100%;
+    position: relative;
+    background-color: #f8f8f8;
+
+    .section_divider {
+        background-color: @section_divider;
+
+        .section_name {
+            margin: auto;
+            left: 0;
+            right: 0;
+            margin-top: 20px;
+            height: 45px;
+            line-height: 45px;
+            color: #999999;
+            width: @page_width;
+            font-family: Quicksand;
+        }
+    }
+
+    #company_list_content {
+        width: @page_width;
+        margin: auto;
+        left: 0;
+        right: 0;
+        margin-top: 20px;
+        margin-top: 40px;
+
+        .company_list_tip {
+            .tip_icon {
+                background: url('/static/images/jobs/tip_icon.png');
+                width: 9px;
+                height: 14px;
+                display: inline-block;
+            }
+
+            span {
+                color: #999999;
+                font-size: 13px;
+                margin-left: 12px;
+                font-family: Quicksand;
+            }
+        }
+
+        #company_list {
+            padding-top: 20px;
+
+            .company_info_wrapper {
+                position: relative;
+                border-radius: 3px;
+                width: 360px;
+                border: 1px solid #ebebeb;
+                box-shadow: 0 2px 0 #ebebeb;
+                margin-right: 30px;
+
+                .company_info_pic {
+                    position: relative;
+                    width: 360px;
+                    height: 280px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .like {
+                        background: url('/static/images/jobs/like.png') no-repeat;
+                        width: 31px;
+                        height: 26px;
+                        float: right;
+                        right: 15px;
+                        position: absolute;
+                        top: 20px
+                    }
+
+                    .salary {
+                        background-color: #3c3f40;
+                        color: #f8f8f8;
+                        position: absolute;
+                        top: 215px;
+                        margin-left: 15px;
+                        border-radius: 3px;
+                        padding: 14px;
+                        font-size: 14px;
+                        font-family: Quicksand;
+                    }
+
+                    .view_job {
+                        position: absolute;
+                        display: inline-block;
+                        top: 215px;
+                        float: right;
+                        right: 15px;
+                        background-color: #428bca;
+                        color: #f8f8f8;
+                        border: 1px solid #357ebc;
+                        border-radius: 3px;
+                        padding: 13px;
+                        font-size: 14px;
+                        font-family: Quicksand;
+                        box-sizing: border-box;
+                    }
+                }
+
+                .user_attraction {
+                    position: relative;
+
+                    .applications {
+                        background: url('/static/images/jobs/user_icon.png') no-repeat;
+                        background-size: 12px 12px;
+                        height: 12px;
+                        color: #3c3f40;
+                        padding-left: 18px;
+                        font-size: 12px;
+                        font-family: Quicksand;
+                        margin-top: 10px;
+                        margin-left: 15px;
+                    }
+
+                    .reputation {
+                        background: url('/static/images/jobs/star.svg');
+                        background-size : 100px 100px;
+                    }
+                }
+
+                .more_info {
+                    width: 360px;
+                    padding-top: 24px;
+
+                    .info_row {
+                        padding-bottom: 20px;
+
+                        .section_name {
+                            font-family: Quicksand;
+                            color: #636566;
+                            font-size: 13px;
+                            padding-left: 15px;
+                        }
+
+                        .dash_line {
+
+                        }
+
+                        .section_value {
+                            position: absolute;
+                            font-family: Quicksand;
+                            font-size: 13px;
+                            color: #636566;
+                            float: right;
+                            right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .company_list_footer {
+        height: 200px;
+    }
+}
+
+
