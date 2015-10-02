@@ -48,27 +48,6 @@
             </div>
         </div>
     </script>
-
-    <script type="text/template" id="tpl_job_detail_wrapper">
-        <div class="job_detail_wrapper"></div>
-    </script>
-
-    <script type="text/template" id="tpl_job_detail">
-        <div class="jobs_wrapper">
-            <div class="job_wrapper">
-                <div class="job_title"><%= job.job_title %></div>
-                <div><%= job.description %></div>
-                <div><%= job.requirements %></div>
-                <div><%= job.skills %></div>
-                <div><%= job.location %></div>
-                <div><%= job.salary %></div>
-                <div><%= job.equity %></div>
-                <div><%= job.job_type %></div>
-                <div><%= job.responsibility %></div>
-            </div>
-        </div>
-    </script>
-
     {% load loader %}
     {% load_css_bundle "jobs" %}
     {% load_js_bundle "jobs" %}
