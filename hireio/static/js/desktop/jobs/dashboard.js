@@ -4,7 +4,9 @@ _.namespace('hio.jobs.views', function(ns) {
     ns.Dashboard = hio.base.hio_base_view.extend({
 
         events: {
-            'click .job_title': 'show_job_detail'
+            'click .job_title': 'show_job_detail',
+            'click .login.button': 'show_login_form',
+            'click .signup.button': 'show_signup_form'
         },
 
         initialize: function() {
@@ -15,6 +17,8 @@ _.namespace('hio.jobs.views', function(ns) {
             var template = _.template($('#tpl_dashboard').html());
             this.$el.html(template());
             this.load_more_companies();
+
+            return this;
         },
 
         render_company_row: function(companies) {
@@ -44,6 +48,15 @@ _.namespace('hio.jobs.views', function(ns) {
         show_job_detail: function(e) {
             var url = 'job_detail?job_id=' + e.target.dataset.id;
             hio.jobs.router.navigate(url, {trigger: true});
+        },
+
+        show_login_form: function() {
+            var template = _.template($('#tpl_login_form'));
+            $('body').append(template());
+        },
+
+        show_signup_form: function() {
+
         }
     });
 });

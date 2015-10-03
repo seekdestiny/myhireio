@@ -1,6 +1,8 @@
 _.namespace('hio.base', function(ns) {
     "use strict";
 
+    ns.views = {};
+
     ns.hio_base_view = Backbone.View.extend({
 
         initialize: function() {

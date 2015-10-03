@@ -2,11 +2,42 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+    {% load loader %}
+    {% load_js_bundle "base" %}
+    {% load_css_bundle "base" %}
     {% block head %}{% endblock %}
 </head>
 
 <body>
     <div class="hireio_wrapper">
+        <div class="signin_modal_widget" style="display:none">
+            <div class="signin_form_wrapper">
+                <div class="signin_form_background"></div>
+                <div class="signin_form_content">
+                    <div class="signin_form_title">
+                        SIGN IN
+                        <div class="signin_form_close_button"></div>
+                    </div>
+                    <form id="signin_form" method="post" action="signin">
+                        <div class="linked_in_signin_button"></div>
+                        <div class="signin_form_content_divider">OR</div>
+                        {% csrf_token %}
+                        <div class="signin_form_email signin_input_field">
+                            {{ signin_form.username.label_tag }}<br />
+                            {{ signin_form.username }}
+                        </div>
+                        <div class="signin_form_password signin_input_field">
+                            {{ signin_form.password.label_tag }}<br />
+                            {{ signin_form.password }}
+                        </div>
+                        <div class="signin_form_button_row">
+                            <input type="submit" class="signin_button" value="SIGN IN">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="hireio_title_wrapper">
             {% block title %}
                 <div class="logo">HireIO</div>
@@ -25,8 +56,8 @@
                         <div class="blog button navigate">Blog</div>
                     </div>
                     <div class="account_management_section">
-                        <div class="login button navigate">Login</div>
-                        <div class="signup button navigate">Signup</div>
+                        <div class="signin button navigate">Sign in</div>
+                        <div class="signup button navigate">Sign up</div>
                     </div>
                 </div>
             {% endblock %}
@@ -39,4 +70,22 @@
             {% block footer %}{% endblock %}
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.signin_modal_widget').hide();
+
+            $('.signin.button.navigate').click(function() {
+                $('.signin_modal_widget').show();
+            });
+
+            $('.signin_form_background').click(function() {
+                $('.signin_modal_widget').hide();
+            });
+
+            $('.signin_form_close_button').click(function() {
+                $('.signin_modal_widget').hide();
+            });
+        });
+    </script>
 </body>

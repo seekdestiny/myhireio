@@ -8,24 +8,26 @@
             "js/external/backbone.js"
         ],
 
+        "base": [
+            "js/desktop/base/signin.js",
+            "js/desktop/base/base.js"
+        ],
+
         "recruiters": [
         ],
 
         "jobs": [
-            "js/desktop/base/base.js",
             "js/desktop/jobs/bootstrap.js",
             "js/desktop/jobs/dashboard.js",
             "js/desktop/jobs/job_detail.js"
         ],
 
         "talents": [
-            "js/desktop/base/base.js",
             "js/desktop/talents/talent_list.js",
             "js/desktop/talents/bootstrap.js"
         ],
 
         "events": [
-            "js/desktop/base/base.js",
             "js/desktop/events/event_list.js",
             "js/desktop/events/bootstrap.js"
         ]
@@ -34,8 +36,12 @@
         "global_css": [
         ],
 
-        "jobs": [
+        "base": [
             "less/desktop/base/base.css",
+            "less/desktop/base/signin.css"
+        ],
+
+        "jobs": [
             "less/desktop/jobs/new_job.css",
             "less/desktop/jobs/job_post.css",
             "less/desktop/jobs/job_detail.css",
@@ -43,12 +49,10 @@
         ],
 
         "talents": [
-            "less/desktop/base/base.css",
             "less/desktop/talents/talent_list.css"
         ],
 
         "events": [
-            "less/desktop/base/base.css",
             "less/desktop/events/event_list.css"
         ]
     }

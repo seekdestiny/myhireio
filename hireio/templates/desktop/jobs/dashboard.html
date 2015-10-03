@@ -48,6 +48,22 @@
             </div>
         </div>
     </script>
+
+    <script type="text/template" id="tpl_signup_form">
+        <form id="registration" method="post" action="recruiter_register">
+            {% csrf_token %}
+            <p>
+                {{ form.username.label_tag }}<br />
+                {{ form.username }}
+            </p>
+            <p>
+                {{ form.password.label_tag }}<br />
+                {{ form.password }}
+            </p>
+            <input type="submit" value="Sign up">
+        </form>
+    </script>
+
     {% load loader %}
     {% load_css_bundle "jobs" %}
     {% load_js_bundle "jobs" %}
