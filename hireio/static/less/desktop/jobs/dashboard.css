@@ -47,6 +47,7 @@
   border: 1px solid #ebebeb;
   box-shadow: 0 2px 0 #ebebeb;
   margin-right: 30px;
+  display: inline-block;
 }
 #company_list_wrapper #company_list_content #company_list .company_info_wrapper .company_info_pic {
   position: relative;
