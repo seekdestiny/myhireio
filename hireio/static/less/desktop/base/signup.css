@@ -28,8 +28,8 @@
 }
 .signup_modal_widget .signup_form_wrapper .signup_form_content .signup_form_title {
   background-color: #ebebeb;
-  height: 86px;
-  line-height: 86px;
+  height: 70px;
+  line-height: 70px;
   text-align: center;
   color: #3c3f40;
   font-family: Quicksand;
@@ -70,7 +70,7 @@
   opacity: 0.5;
 }
 .signup_modal_widget .signup_form_wrapper .signup_form_content #signup_form {
-  height: 565px;
+  height: 485px;
 }
 .signup_modal_widget .signup_form_wrapper .signup_form_content #signup_form input[type=email],
 .signup_modal_widget .signup_form_wrapper .signup_form_content #signup_form input[type=password],
@@ -95,7 +95,7 @@
   height: 41px;
   width: 215px;
   background: url('/static/images/base/Sign-in-Large---Default.png') no-repeat;
-  top: 30px;
+  top: 20px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -108,7 +108,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 335px;
-  top: 53px;
+  top: 35px;
   border-bottom: solid 1px #e5e5e5;
   padding-bottom: 10px;
   font-weight: bold;
@@ -116,19 +116,22 @@
 .signup_modal_widget .signup_form_wrapper .signup_form_content #signup_form .signup_input_field {
   text-align: left;
   position: relative;
-  top: 50px;
+  top: 28px;
   font-family: Quicksand;
   color: #3c3f40;
   font-size: 13px;
-  padding-top: 26px;
+  padding-top: 15px;
   width: 335px;
   margin-left: auto;
   margin-right: auto;
   font-weight: bold;
 }
+.signup_modal_widget .signup_form_wrapper .signup_form_content #signup_form .signup_input_field.signup_form_password {
+  top: 12px;
+}
 .signup_modal_widget .signup_form_wrapper .signup_form_content #signup_form .signup_button {
   position: relative;
-  top: 95px;
+  top: 61px;
   background-color: #60b760;
   width: 340px;
   height: 46px;
