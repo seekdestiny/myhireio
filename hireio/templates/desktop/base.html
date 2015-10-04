@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     {% load loader %}
     {% load_js_bundle "base" %}
     {% load_css_bundle "base" %}
@@ -10,6 +11,40 @@
 
 <body>
     <div class="hireio_wrapper">
+        <div class="signup_modal_widget" style="display:none">
+            <div class="signup_form_wrapper">
+                <div class="signup_form_background"></div>
+                <div class="signup_form_content">
+                    <div class="signup_form_title">
+                        SIGN UP TO SEE MORE  
+                        <i class="fa fa-exclamation-circle fa-1"></i>
+                            <div class="signup_more_info">View company profiles, open positions, job descriptions, see your future teamates, and more!</div>
+                        <div class="signup_form_close_button"></div>
+                    </div>
+                    <form id="signup_form" method="post" action="/account/signup">
+                        <div class="linked_in_signup_button"></div>
+                        <div class="signup_form_content_divider">OR</div>
+                        {% csrf_token %}
+                        <div class="signup_form_email signup_input_field">
+                            {{ signup_form.username.label_tag }}<br />
+                            {{ signup_form.username }}
+                        </div>
+                        <div class="signup_form_confirm_email signup_input_field">
+                            Confirm your email address<br />
+                            <input type="text" name="confirmemail" id="id_confirm_email">
+                        </div>
+                        <div class="signup_form_password signup_input_field">
+                            <br>{{ signup_form.password.label_tag }}<br />
+                            {{ signup_form.password }}
+                        </div>
+                        <div class="signup_form_button_row">
+                            <input type="submit" class="signup_button" value="SIGN UP">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="signin_modal_widget" style="display:none">
             <div class="signin_form_wrapper">
                 <div class="signin_form_background"></div>
@@ -18,7 +53,7 @@
                         SIGN IN
                         <div class="signin_form_close_button"></div>
                     </div>
-                    <form id="signin_form" method="post" action="signin">
+                    <form id="signin_form" method="post" action="/account/signin">
                         <div class="linked_in_signin_button"></div>
                         <div class="signin_form_content_divider">OR</div>
                         {% csrf_token %}
@@ -56,8 +91,8 @@
                         <div class="blog button navigate">Blog</div>
                     </div>
                     <div class="account_management_section">
-                        <div class="signin button navigate">Sign in</div>
                         <div class="signup button navigate">Sign up</div>
+                        <div class="signin button navigate">Login in</div>
                     </div>
                 </div>
             {% endblock %}
@@ -73,18 +108,29 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.signin_modal_widget').hide();
+            $('.signin_form_background').click(function() {
+                $('.signin_modal_widget').hide();
+            });
 
             $('.signin.button.navigate').click(function() {
                 $('.signin_modal_widget').show();
             });
 
-            $('.signin_form_background').click(function() {
-                $('.signin_modal_widget').hide();
-            });
 
             $('.signin_form_close_button').click(function() {
                 $('.signin_modal_widget').hide();
+                });
+
+            $('.signup_form_background').click(function() {
+                $('.signup_modal_widget').hide();
+            });
+
+            $('.signup.button.navigate').click(function() {
+                $('.signup_modal_widget').show();
+            });
+
+            $('.signup_form_close_button').click(function() {
+                $('.signup_modal_widget').hide();
             });
         });
     </script>

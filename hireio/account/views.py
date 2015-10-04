@@ -5,7 +5,7 @@ from django.shortcuts import render
 from account import forms
 from account import models
 
-def recruiter_register(request):
+def signup(request):
     if request.method == 'GET':
         return show_registration_page(request)
     elif request.method == 'POST':
@@ -47,7 +47,12 @@ def login(request):
 
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password')
-        user = auth.authenticate(username=username, password=password)
+
+        try:
+            user = auth.authenticate(username=username, password=password)
+        except User.DoesNotExist:
+            return show_login_page(request)
+
         if user is None:
             return show_login_page(request)
 

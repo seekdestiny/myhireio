@@ -9,7 +9,6 @@
         ],
 
         "base": [
-            "js/desktop/base/signin.js",
             "js/desktop/base/base.js"
         ],
 
@@ -38,7 +37,8 @@
 
         "base": [
             "less/desktop/base/base.css",
-            "less/desktop/base/signin.css"
+            "less/desktop/base/signin.css",
+            "less/desktop/base/signup.css"
         ],
 
         "jobs": [

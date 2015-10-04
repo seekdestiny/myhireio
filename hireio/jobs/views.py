@@ -5,7 +5,7 @@ from datetime import datetime
 
 from forms import CompanyForm, JobPostForm
 from models import Company, JobPost
-from account.utils import create_register_form, create_login_form
+from account.utils import create_signup_form, create_login_form
 
 import json
 
@@ -97,7 +97,7 @@ def create_company(request):
 def dashboard(request):
     if request.method == 'GET':
         template = 'desktop/jobs/dashboard.html'
-        register_form = create_register_form()
+        signup_form = create_signup_form()
         signin_form = create_login_form()
 
         return render(
@@ -105,7 +105,7 @@ def dashboard(request):
             template,
             {
                 'tab': 'companies',
-                'register_form': register_form,
+                'signup_form': signup_form,
                 'signin_form': signin_form,
             }
         )
