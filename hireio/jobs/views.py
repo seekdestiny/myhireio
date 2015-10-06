@@ -132,3 +132,13 @@ def load_more_companies(request):
         companies.append(serialized_item)
 
     return HttpResponse(json.dumps(companies), content_type="application/json")
+
+def load_company_profile(request):
+   if request.method == 'GET':
+    company_id = int(request.GET.get('company_id', ''))
+    if not company_id:
+        company = None
+    else:
+        company = Company.objects.get(id=company_id).serialize()
+    return HttpResponse(json.dumps(company), content_type="application/json")
+

@@ -4,9 +4,9 @@ _.namespace('hio.jobs.views', function(ns) {
     ns.Dashboard = hio.base.hio_base_view.extend({
 
         events: {
-            'click .job_title': 'show_job_detail',
             'click .login.button': 'show_login_form',
-            'click .signup.button': 'show_signup_form'
+            'click .signup.button': 'show_signup_form',
+            'click .company_info_wrapper': 'show_company_profile'
         },
 
         initialize: function() {
@@ -45,18 +45,9 @@ _.namespace('hio.jobs.views', function(ns) {
             });
         },
 
-        show_job_detail: function(e) {
-            var url = 'job_detail?job_id=' + e.target.dataset.id;
-            hio.jobs.router.navigate(url, {trigger: true});
-        },
-
-        show_login_form: function() {
-            var template = _.template($('#tpl_login_form'));
-            $('body').append(template());
-        },
-
-        show_signup_form: function() {
-
+        show_company_profile: function(e) {
+            var id = $(e.currentTarget).data('company-id');
+            hio.jobs.router.navigate('company_profile?' + 'company_id=' + id, {trigger: true});
         }
     });
 });

@@ -1,6 +1,7 @@
 {% extends 'desktop/base.html' %}
 
 {% block head %}
+    <!-- dashboard -->
     <script type="text/template" id="tpl_dashboard">
         <div id="company_list_wrapper">
             <div class="section_divider">
@@ -18,7 +19,7 @@
     </script>
 
     <script type="text/template" id="tpl_company_info">
-        <div class="company_info_wrapper">
+        <div class="company_info_wrapper" data-company-id=<%= company.id %>>
             <div class="company_info_pic">
                 <img src="/static/images/jobs/company_image/mixpanel-office.jpg"></img>
                 <div class="like"></div>
@@ -26,7 +27,7 @@
                 <div class="view_job">View job</div>
             </div>
             <div class="user_attraction">
-                <div class="applications">1,121</div>
+                <div class="applications">1,121 Reviews</div>
                 <div class="reputation"></div>
             </div>
             <div class="more_info">
@@ -62,6 +63,95 @@
             </p>
             <input type="submit" value="Sign up">
         </form>
+    </script>
+
+    <!-- company profile -->
+    <script type="text/template" id="tpl_company_profile_wrapper">
+        <div id="company_profile_wrapper">
+            <div class="section_divider">
+                <div class="section_name_wrapper">
+                    <div class="ancestor_section_name">Browse Companies</div>
+                    <div class="section_name"> / Company profile</div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="tpl_company_profile">
+        <div class="company_profile_content">
+            <div class="company_profile_image">
+                <div class="company_profile_image_black_cover"></div>
+                <div class="company_profile_image_content_wrapper">
+                    <div class="company_profile_icon"></div>
+                    <div class="company_profile_description_section">
+                        <div class="company_profile_name"><%= profile.name %></div>
+                        <div class="company_profile_company_description"><%= profile.product %></div>
+                    </div>
+                </div>
+                <div class="company_profile_view_jobs_button">View Open Positions</div>
+            </div>
+            <div class="company_profile_summary_section">
+                <div class="user_attraction">
+                    <div class="applications">1,121 Reviews</div>
+                    <div class="reputation"></div>
+                </div>
+                <div class="more_info">
+                    <div class="info_row">
+                        <div class="info">
+                            <span class="section_name">Company</span>
+                            <span class="dash_line"></span>
+                            <span class="section_value"><%= profile.name %></span>
+                        </div>
+                        <div class="info">
+                            <span class="section_name">Office Locations</span>
+                            <span class="dash_line"></span>
+                            <span class="section_value"><%= profile.location %></span>
+                        </div>
+                        <div class="info">
+                            <span class="section_name">Country of Origin</span>
+                            <span class="dash_line"></span>
+                            <span class="section_value">United States</span>
+                        </div>
+                    </div>
+                    <div class="info_row">
+                        <div class="info">
+                            <span class="section_name">Size</span>
+                            <span class="dash_line"></span>
+                            <span class="section_value"><%= profile.size %> Employees</span>
+                        </div>
+                        <div class="info">
+                            <span class="section_name">Full Benefits</span>
+                            <span class="dash_line"></span>
+                            <span class="section_value">Yes</span>
+                        </div>
+                        <div class="info">
+                            <span class="section_name">Male / Femal Ratio</span>
+                            <span class="dash_line"></span>
+                            <span class="section_value">50 / 50</span>
+                        </div>
+                    </div>
+                    <div class="info_row">
+                        <div class="info">
+                            <div class="info">
+                                <span class="section_name">Year founded</span>
+                                <span class="dash_line"></span>
+                                <span class="section_value">2010</span>
+                            </div>
+                            <div class="info">
+                                <span class="section_name">Stock Options</span>
+                                <span class="dash_line"></span>
+                                <span class="section_value">2010</span>
+                            </div>
+                            <div class="info">
+                                <span class="section_name">Working Hours</span>
+                                <span class="dash_line"></span>
+                                <span class="section_value">9:30am - 5:00pm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </script>
 
     {% load loader %}

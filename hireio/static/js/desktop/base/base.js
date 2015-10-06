@@ -13,26 +13,16 @@ _.namespace('hio.base', function(ns) {
         },
 
         transitionIn: function(callback) {
-            var view = this;
-            var delay;
-            var transitionIn = function() {
-                view.$el.addClass('is_visible');
-                view.$el.one('transitionend', function() {
-                    if (_.isFunction(callback)) {
-                        callback();
-                    }
-                });
+            // this is for transition animation
+            if (callback) {
+                callback();
             }
         },
 
         transitionOut: function(callback) {
-            var view = this;
-            view.$el.removeClass('is-visible');
-            view.$el.one('transitionend', function() {
-                if (_.isfunction(callback)) {
-                    callback();
-                }
-            });
+            if (callback) {
+                callback();
+            }
         }
 
     });

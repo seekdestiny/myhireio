@@ -1,0 +1,120 @@
+@section_divider: #ebebeb;
+@page_width: 1150px;
+@company_profile_image_height: 270px;
+
+#company_profile_wrapper {
+    width: 100%;
+    position: relative;
+    background-color: #f8f8f8;
+
+    .section_divider {
+        background-color: @section_divider;
+        margin-top: 20px;
+
+        .section_name_wrapper {
+            margin: auto;
+            left: 0;
+            right: 0;
+            width: @page_width;
+
+            .ancestor_section_name {
+                font-family: 'Open Sans';
+                display: inline-block;
+                color: #999999;
+            }
+
+            .section_name {
+                display: inline-block;
+                height: 45px;
+                line-height: 45px;
+                color: #999999;
+                font-family: 'Open Sans';
+            }
+        }
+    }
+
+    .company_profile_content {
+        width: @page_width;
+        margin: auto;
+        left: 0;
+        right: 0;
+        position: relative;
+
+        .company_profile_image {
+            width: 100%;
+            height: @company_profile_image_height;
+            line-height: @company_profile_image_height;
+            background: url('/static/images/jobs/company_image/mixpanel-company-photo.jpg') no-repeat;
+            margin-top: 30px;
+            border-radius: 3px;
+
+            .company_profile_image_black_cover {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background:rgba(0, 0, 0, 0.4);
+            }
+
+            .company_profile_image_content_wrapper {
+                height: @company_profile_image_height;
+
+                .company_profile_icon {
+                    display: inline-block;
+                    background: url('/static/images/jobs/company_image/Mixpanel_logo.jpeg') no-repeat;
+                    width: 150px;
+                    height: 150px;
+                    background-size: contain;
+                    z-index: 99999;
+                    left: 40px;
+                    border-radius: 3px;
+                    vertical-align: middle;
+                    position: relative;
+                }
+
+                .company_profile_description_section {
+                    display: inline-block;
+                    color: white;
+                    left: 60px;
+                    position: relative;
+                    vertical-align: middle;
+
+                    .company_profile_name {
+                        font-family: 'Open Sans';
+                        font-weight: bold;
+                        font-size: 28px;
+                        line-height: 1;
+                    }
+
+                    .company_profile_company_description {
+                        font-family: 'Open Sans';
+                        font-size: 14px;
+                        width: 915px;
+                        line-height: 1;
+                        margin-top: 10px;
+                    }
+                }
+
+            }
+
+            .company_profile_view_jobs_button {
+                width: 180px;
+                height: 40px;
+                background-color: #428bca;
+                color: white;
+                line-height: 40px;
+                vertical-align: middle;
+                text-align: center;
+                border: 1px solid #357ebc;
+                border-radius: 3px;
+                display: inline-block;
+                float: right;
+                right: 20px;
+                position: relative;
+                bottom: 64px;
+            }
+        }
+
+    }
+}

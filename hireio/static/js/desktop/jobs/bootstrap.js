@@ -21,7 +21,8 @@ _.namespace('hio.jobs', function(ns) {
         app.Router = Backbone.Router.extend({
             routes: {
                 '': 'dashboard',
-                'job_detail?job_id=:job_id': 'job_detail'
+                'job_detail?job_id=:job_id': 'job_detail',
+                'company_profile?company_id=:company_id': 'company_profile'
             },
 
             dashboard: function() {
@@ -31,6 +32,11 @@ _.namespace('hio.jobs', function(ns) {
 
             job_detail: function(job_id) {
                 var view = new ns.views.JobDetail({ job_id: job_id });
+                app.instance.goto(view);
+            },
+
+            company_profile: function(company_id) {
+                var view = new ns.views.CompanyProfile({ company_id: company_id });
                 app.instance.goto(view);
             }
         });

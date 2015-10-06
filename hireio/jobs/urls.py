@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^$', views.dashboard, name='dashboard'),
     url(r'^load_more_companies', views.load_more_companies, name='load_more_companies'),
     url(r'^job_detail', views.job_detail, name='detail'),
+    url(r'^load_company_profile', views.load_company_profile, name='load_company_profile'),
 ]

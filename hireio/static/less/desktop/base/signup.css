@@ -32,7 +32,7 @@
   line-height: 70px;
   text-align: center;
   color: #3c3f40;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
   border-radius: 3px 3px 0 0;
 }
 .signup_modal_widget .signup_form_wrapper .signup_form_content .signup_form_title .fa-exclamation-circle {
@@ -50,7 +50,7 @@
   top: 31px;
   left: 309px;
   font-size: 10px;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
   border-radius: 3px;
   text-align: left;
 }
@@ -104,7 +104,7 @@
   position: relative;
   color: #3c3f40;
   text-align: center;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
   margin-left: auto;
   margin-right: auto;
   width: 335px;
@@ -117,7 +117,7 @@
   text-align: left;
   position: relative;
   top: 28px;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
   color: #3c3f40;
   font-size: 13px;
   padding-top: 15px;

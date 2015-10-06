@@ -15,7 +15,7 @@
   line-height: 45px;
   color: #999999;
   width: 1150px;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
 }
 #company_list_wrapper #company_list_content {
   width: 1150px;
@@ -35,7 +35,7 @@
   color: #999999;
   font-size: 13px;
   margin-left: 12px;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
 }
 #company_list_wrapper #company_list_content #company_list {
   padding-top: 20px;
@@ -76,7 +76,7 @@
   border-radius: 3px;
   padding: 14px;
   font-size: 14px;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
 }
 #company_list_wrapper #company_list_content #company_list .company_info_wrapper .company_info_pic .view_job {
   position: absolute;
@@ -90,7 +90,7 @@
   border-radius: 3px;
   padding: 13px;
   font-size: 14px;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
   box-sizing: border-box;
 }
 #company_list_wrapper #company_list_content #company_list .company_info_wrapper .user_attraction {
@@ -103,7 +103,7 @@
   color: #3c3f40;
   padding-left: 18px;
   font-size: 12px;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
   margin-top: 10px;
   margin-left: 15px;
 }
@@ -119,14 +119,14 @@
   padding-bottom: 20px;
 }
 #company_list_wrapper #company_list_content #company_list .company_info_wrapper .more_info .info_row .section_name {
-  font-family: Quicksand;
+  font-family: 'Open Sans';
   color: #636566;
   font-size: 13px;
   padding-left: 15px;
 }
 #company_list_wrapper #company_list_content #company_list .company_info_wrapper .more_info .info_row .section_value {
   position: absolute;
-  font-family: Quicksand;
+  font-family: 'Open Sans';
   font-size: 13px;
   color: #636566;
   float: right;

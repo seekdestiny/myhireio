@@ -1,7 +1,7 @@
 from django.db import models
 
 class Company(models.Model):
-    name = models.CharField(max_length=50, primary_key=True, blank=False)
+    name = models.CharField(max_length=50, blank=False)
     tag_name = models.CharField(max_length=100, blank=True)
     product = models.CharField(max_length=1500, default='', blank=False)
     why_us = models.CharField(max_length=1500, blank=True)
@@ -14,6 +14,7 @@ class Company(models.Model):
 
     def serialize(self):
         return {
+            'id': str(self.id),
             'name': str(self.name),
             'tag_name': str(self.tag_name),
             'product': str(self.product),

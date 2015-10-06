@@ -18,7 +18,7 @@
         "jobs": [
             "js/desktop/jobs/bootstrap.js",
             "js/desktop/jobs/dashboard.js",
-            "js/desktop/jobs/job_detail.js"
+            "js/desktop/jobs/company_profile.js"
         ],
 
         "talents": [
@@ -43,9 +43,8 @@
 
         "jobs": [
             "less/desktop/jobs/new_job.css",
-            "less/desktop/jobs/job_post.css",
-            "less/desktop/jobs/job_detail.css",
-            "less/desktop/jobs/dashboard.css"
+            "less/desktop/jobs/dashboard.css",
+            "less/desktop/jobs/company_profile.css"
         ],
 
         "talents": [
