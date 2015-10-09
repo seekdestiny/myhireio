@@ -31,6 +31,7 @@
   left: 0;
   right: 0;
   position: relative;
+  padding-bottom: 50px;
 }
 #company_profile_wrapper .company_profile_content .company_profile_image {
   width: 100%;
@@ -43,7 +44,7 @@
 #company_profile_wrapper .company_profile_content .company_profile_image .company_profile_image_black_cover {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 270px;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.4);
@@ -57,7 +58,7 @@
   width: 150px;
   height: 150px;
   background-size: contain;
-  z-index: 99999;
+  z-index: 1;
   left: 40px;
   border-radius: 3px;
   vertical-align: middle;
@@ -98,4 +99,248 @@
   right: 20px;
   position: relative;
   bottom: 64px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .user_attraction {
+  position: relative;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .user_attraction .applications {
+  background: url('/static/images/jobs/user_icon.png') no-repeat;
+  background-size: 12px 12px;
+  height: 12px;
+  color: #468dc8;
+  padding-left: 18px;
+  font-size: 12px;
+  font-family: 'Open Sans';
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .user_attraction .reputation {
+  background: url('/static/images/jobs/star.svg');
+  background-size: 100px 100px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info {
+  padding-top: 10px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row {
+  position: relative;
+  height: 20px;
+  width: 1150px;
+  padding-top: 15px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info {
+  display: inline-block;
+  position: absolute;
+  width: 350px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info.left {
+  left: 20px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info.mid {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info.right {
+  right: 20px;
+  text-align: right;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info .section_name,
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info .section_value {
+  font-family: 'Open Sans';
+  color: #3c3f40;
+  font-size: 14px;
+  position: absolute;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info .section_name {
+  font-weight: bold;
+  left: 0;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info .section_value {
+  right: 0;
+}
+#company_profile_wrapper .company_profile_content .company_profile_summary_section .more_info .info_row .info .dash_line {
+  height: 1px;
+  width: 100px;
+  display: inline-block;
+  border-top: 1px solid #ebebeb;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 8px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_office_culture {
+  width: 1150px;
+  margin-top: 50px;
+  position: relative;
+}
+#company_profile_wrapper .company_profile_content .company_profile_office_culture .company_profile_office_culture_title {
+  text-align: center;
+  width: 100%;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Open Sans';
+  color: #3c3f40;
+}
+#company_profile_wrapper .company_profile_content .company_profile_office_culture .company_profile_office_culture_description {
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  font-family: 'Open Sans';
+  padding-top: 15px;
+  color: #3c3f40;
+}
+#company_profile_wrapper .company_profile_content .company_profile_office_culture .company_profile_office_culture_image_row {
+  width: 100%;
+  padding-top: 20px;
+  position: relative;
+  height: 290px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_office_culture .company_profile_office_culture_image_row .company_profile_office_culture_image {
+  display: inline-block;
+  width: 365px;
+  height: 270px;
+  position: absolute;
+}
+#company_profile_wrapper .company_profile_content .company_profile_office_culture .company_profile_office_culture_image_row .company_profile_office_culture_image.left {
+  background: url('/static/images/jobs/company_image/company_profile_office_culture_left.png') no-repeat;
+  left: 0;
+}
+#company_profile_wrapper .company_profile_content .company_profile_office_culture .company_profile_office_culture_image_row .company_profile_office_culture_image.mid {
+  background: url('/static/images/jobs/company_image/company_profile_office_culture_mid.png') no-repeat;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+#company_profile_wrapper .company_profile_content .company_profile_office_culture .company_profile_office_culture_image_row .company_profile_office_culture_image.right {
+  background: url('/static/images/jobs/company_image/company_profile_office_culture_right.png') no-repeat;
+  right: 0;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits {
+  width: 1150px;
+  margin-top: 50px;
+  position: relative;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_title {
+  width: 100%;
+  text-align: center;
+  color: #3c3f40;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Open Sans';
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_description {
+  width: 100%;
+  text-align: center;
+  color: #3c3f40;
+  font-size: 12px;
+  font-family: 'Open Sans';
+  padding-top: 15px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content {
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 50px 0;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content .company_profile_perks_benifits_row {
+  height: 35px;
+  width: 1150px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content .company_profile_perks_benifits_row .company_profile_perks_benifits_item {
+  height: 35px;
+  width: 450px;
+  position: absolute;
+  display: inline-block;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content .company_profile_perks_benifits_row .company_profile_perks_benifits_item.left {
+  left: 50px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content .company_profile_perks_benifits_row .company_profile_perks_benifits_item.right {
+  right: 50px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content .company_profile_perks_benifits_row .company_profile_perks_benifits_item .company_profile_perks_benifits_icon {
+  background: url('/static/images/jobs/plus_icon.png') no-repeat;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content .company_profile_perks_benifits_row .company_profile_perks_benifits_item .company_profile_perks_benifits_item_description_section {
+  display: inline-block;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content .company_profile_perks_benifits_row .company_profile_perks_benifits_item .company_profile_perks_benifits_item_description_section .company_profile_perks_benifits_item_title {
+  font-size: 14px;
+  font-family: 'Open Sans';
+  color: #494c4d;
+  font-weight: bold;
+}
+#company_profile_wrapper .company_profile_content .company_profile_perks_benifits .company_profile_perks_benifits_content .company_profile_perks_benifits_row .company_profile_perks_benifits_item .company_profile_perks_benifits_item_description_section .company_profile_perks_benifits_item_description {
+  font-size: 14px;
+  font-family: 'Open Sans';
+  color: #494c4d;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions {
+  width: 1150px;
+  margin-top: 50px;
+  position: relative;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_title {
+  width: 100%;
+  text-align: center;
+  color: #3c3f40;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Open Sans';
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_description {
+  width: 100%;
+  text-align: center;
+  color: #3c3f40;
+  font-size: 12px;
+  font-family: 'Open Sans';
+  padding-top: 15px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_position_section .company_profile_open_positions_position_function {
+  color: #3c3f40;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  padding-top: 40px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_position_section .company_profile_open_positions_position_table {
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 50px 0;
+  color: #565959;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  border-spacing: 0;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_position_section .company_profile_open_positions_position_table .table_row:nth-of-type(2n) {
+  background-color: #f9f9f9;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_position_section .company_profile_open_positions_position_table th.table_column {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #dddddd;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_position_section .company_profile_open_positions_position_table td.table_column {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid #dddddd;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_position_section .company_profile_open_positions_position_table .table_column {
+  width: 383px;
+  text-align: left;
+  padding-left: 25px;
+}
+#company_profile_wrapper .company_profile_content .company_profile_open_positions .company_profile_open_positions_position_section .company_profile_open_positions_position_table .table_column:nth-of-type(3) {
+  width: 382px;
 }
