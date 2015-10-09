@@ -8,6 +8,7 @@ from models import Company, JobPost
 from account.utils import create_signup_form, create_login_form
 
 import json
+# import chardet
 
 def create_job(request):
     template = 'desktop/jobs/new_job.html'
@@ -127,7 +128,11 @@ def load_more_companies(request):
         serialized_item['jobs'] = []
 
         for jobpost in company.jobpost_set.all():
-            serialized_item['jobs'].append(jobpost.serialize())
+			# print chardet.detect(jobpost.description)
+			try:
+				serialized_item['jobs'].append(jobpost.serialize())
+			except Exception,ex:
+				print ex
 
         companies.append(serialized_item)
 
