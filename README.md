@@ -40,9 +40,15 @@ pip install mysql-python
 python manage.py migrate
 ```
 
-##decode log
+##decode branch log
 
 1. static/js/jobs/dashboard.js
 ajax url changed. 
 Problem: the 127.0.0.1 or localhost must be the same as URL in Broswer.
 Solution: deleted `http://127.0.0.1:8000`, kept `/jobs/load_more_companies`
+
+2. jobs/model.py
+change `str` to `unicode`, in order to handle character beyond ASCII.
+In the future, support Chinese need to configure to use UTF-8 encode in root setting
+
+3. add .gitignore file
