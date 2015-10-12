@@ -165,3 +165,16 @@ class JobPostForm(forms.Form):
             'text-length': 1000,
         }),
     )
+
+class PerksBenifitsForm(forms.Form):
+    title = forms.CharField(
+        label='Title',
+        max_length=30,
+        required=True,
+    )
+
+    description = forms.CharField(
+        label='description',
+        max_length=100,
+        required=True,
+    )

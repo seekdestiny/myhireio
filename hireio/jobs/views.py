@@ -1,18 +1,19 @@
+from django.forms.forsets import formset_factory
 from django.shortcuts import render
 from django.http import HttpResponse
 
 from datetime import datetime
 
-from forms import CompanyForm, JobPostForm
+from forms import CompanyForm, JobPostForm, PerksBenifitsForm
 from models import Company, JobPost
 from account.utils import create_signup_form, create_login_form
 
 import json
 
 def create_job(request):
-    template = 'desktop/jobs/new_job.html'
+    template = 'desktop/new_position/new_job.html'
     if request.method == 'GET':
-        template = 'desktop/jobs/new_job.html'
+        template = 'desktop/new_position/new_job.html'
         form = JobPostForm()
         return render(
             request,
@@ -53,7 +54,7 @@ def create_job(request):
 
 def job_detail(request):
     if request.method == 'GET':
-        template = 'desktop/jobs/job_detail.html'
+        template = 'desktop/new_position/job_detail.html'
         job_id = int(request.GET.get('job_id', ''))
         if not job_id:
             job_post = None
@@ -63,7 +64,7 @@ def job_detail(request):
 
 def create_company(request):
     if request.method == 'GET':
-        template = 'desktop/jobs/new_company.html'
+        template = 'desktop/new_position/new_company.html'
         form = CompanyForm()
         return render(
             request,
@@ -142,3 +143,15 @@ def load_company_profile(request):
         company = Company.objects.get(id=company_id).serialize()
     return HttpResponse(json.dumps(company), content_type="application/json")
 
+def perks_benifits_edit_page(request):
+    perks_benifits_formset = formset_factory(PerksBenifitsForm)
+    return render(
+        request,
+        'desktop/new_position/add_perks_benifits',
+        {
+            'formset': perks_benifits_formset,
+        }
+    )
+
+def add_perks_benifits(request):
+    1
