@@ -16,7 +16,7 @@
                 <div class="signup_form_background"></div>
                 <div class="signup_form_content">
                     <div class="signup_form_title">
-                        SIGN UP TO SEE MORE  
+                        SIGN UP TO SEE MORE
                         <i class="fa fa-exclamation-circle fa-1"></i>
                             <div class="signup_more_info">View company profiles, open positions, job descriptions, see your future teamates, and more!</div>
                         <div class="signup_form_close_button"></div>
@@ -77,23 +77,29 @@
             {% block title %}
                 <div class="logo">HireIO</div>
                 <div class="navigation_section">
-                    <div class="page_navigate_section">
-                        <a href="/jobs/">
-                            <div class="companies button navigate {% if tab == "companies" %}selected{% endif %}">Companies</div>
-                        </a>
-                        <a href="/talents/">
-                            <div class="talents button navigate {% if tab == "talents" %}selected{% endif %}">Talents</div>
-                        </a>
-                        <div class="about button navigate">About us</div>
-                        <a href="/events/">
-                            <div class="events button navigate {% if tab == "events" %}selected{% endif %}">Events</div>
-                        </a>
-                        <div class="blog button navigate">Blog</div>
-                    </div>
-                    <div class="account_management_section">
-                        <div class="signup button navigate">Sign up</div>
-                        <div class="signin button navigate">Login in</div>
-                    </div>
+                    <ul class="page_navigate_section nav .nav-tabs nav-pills">
+                        <li>
+                            <a href="/jobs/">
+                                <div class="companies navigate {% if tab == "companies" %}selected{% endif %}">Companies</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/talents/">
+                                <div class="talents navigate {% if tab == "talents" %}selected{% endif %}">Talents</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="about navigate">About us</a>
+                        </li>
+                        <li>
+                            <a href="/events/">
+                                <div class="events navigate {% if tab == "events" %}selected{% endif %}">Events</div>
+                            </a>
+                        </li>
+                        <li><a class="blog navigate">Blog</a></li>
+                        <li><div class="signup navigate">Sign up</div></li>
+                        <li><div class="signin navigate">Login in</div></li>
+                    </ul>
                 </div>
             {% endblock %}
         </div>
@@ -112,7 +118,7 @@
                 $('.signin_modal_widget').hide();
             });
 
-            $('.signin.button.navigate').click(function() {
+            $('.signin.navigate').click(function() {
                 $('.signin_modal_widget').show();
             });
 
@@ -125,7 +131,7 @@
                 $('.signup_modal_widget').hide();
             });
 
-            $('.signup.button.navigate').click(function() {
+            $('.signup.navigate').click(function() {
                 $('.signup_modal_widget').show();
             });
 

@@ -5,30 +5,31 @@
             "js/external/underscore.js",
             "js/external/underscore.string.js",
             "js/external/underscore.mixins.js",
-            "js/external/backbone.js"
+            "js/external/backbone.js",
+            "js/bootstrap.js"
         ],
 
         "base": [
-            "js/desktop/base/base.js"
+            "js/base/base.js"
         ],
 
         "recruiters": [
         ],
 
         "jobs": [
-            "js/desktop/jobs/bootstrap.js",
-            "js/desktop/jobs/dashboard.js",
-            "js/desktop/jobs/company_profile.js"
+            "js/jobs/bootstrap.js",
+            "js/jobs/dashboard.js",
+            "js/jobs/company_profile.js"
         ],
 
         "talents": [
-            "js/desktop/talents/talent_list.js",
-            "js/desktop/talents/bootstrap.js"
+            "js/talents/talent_list.js",
+            "js/talents/bootstrap.js"
         ],
 
         "events": [
-            "js/desktop/events/event_list.js",
-            "js/desktop/events/bootstrap.js"
+            "js/events/event_list.js",
+            "js/events/bootstrap.js"
         ]
     },
     "css": {
@@ -36,23 +37,24 @@
         ],
 
         "base": [
-            "less/desktop/base/base.css",
-            "less/desktop/base/signin.css",
-            "less/desktop/base/signup.css"
+            "less/bootstrap.css",
+            "less/base/base.css",
+            "less/base/signin.css",
+            "less/base/signup.css"
         ],
 
         "jobs": [
-            "less/desktop/jobs/new_job.css",
-            "less/desktop/jobs/dashboard.css",
-            "less/desktop/jobs/company_profile.css"
+            "less/jobs/new_job.css",
+            "less/jobs/dashboard.css",
+            "less/jobs/company_profile.css"
         ],
 
         "talents": [
-            "less/desktop/talents/talent_list.css"
+            "less/talents/talent_list.css"
         ],
 
         "events": [
-            "less/desktop/events/event_list.css"
+            "less/events/event_list.css"
         ]
     }
 }

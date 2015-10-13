@@ -21,13 +21,13 @@ def signup(request):
 
             return render(
                 request,
-                'desktop/landing_pages/index.html',
+                'landing_pages/index.html',
             )
         else:
             return show_registration_page(request)
 
 def show_registration_page(request):
-    template = 'desktop/account/recruiter_register.html'
+    template = 'account/recruiter_register.html'
     form = forms.RegistrationForm()
     return render(
         request,
@@ -59,12 +59,12 @@ def login(request):
         auth.login(request, user)
         return render(
             request,
-            'desktop/landing_pages/index.html',
+            'landing_pages/index.html',
         )
 
 
 def show_login_page(request):
-    template = 'desktop/account/login.html'
+    template = 'account/login.html'
     form = forms.LoginForm()
     return render(
         request,
@@ -87,12 +87,12 @@ def upload_resume(request):
 
             return render(
                 request,
-                'desktop/landing_pages/index.html',
+                'landing_pages/index.html',
             )
         else:
             return render(
             request,
-            'desktop/account/upload_resume.html',
+            'account/upload_resume.html',
             {
                 'form': form,
             }
@@ -101,7 +101,7 @@ def upload_resume(request):
         form = forms.UploadResumeForm()
         return render(
             request,
-            'desktop/account/upload_resume.html',
+            'account/upload_resume.html',
             {
                 'form': form,
             }

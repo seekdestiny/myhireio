@@ -8,7 +8,7 @@ import json
 def events(request):
     return render(
         request,
-        'desktop/events/event_list.html',
+        'events/event_list.html',
         {
             'tab': 'events',
         }

@@ -8,7 +8,7 @@ import json
 def talents(request):
     return render(
         request,
-        'desktop/talents/talent_list.html',
+        'talents/talent_list.html',
         {
             'tab': 'talents',
         }
