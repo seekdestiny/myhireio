@@ -147,7 +147,7 @@ def perks_benifits_edit_page(request):
     perks_benifits_formset = formset_factory(PerksBenifitsForm)
     return render(
         request,
-        'new_position/add_perks_benifits',
+        'new_position/perks_benifits.html',
         {
             'formset': perks_benifits_formset,
         }
