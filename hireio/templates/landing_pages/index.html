@@ -1,6 +1,10 @@
 <html>
     <head>
         Successed
+        {% if request.user.is_authenticated %}
+        <li>Welcome {{request.user.username}}</li>
+        {% else %}
+        {% endif %}
     </head>
     <body>
     </body>
