@@ -34,7 +34,11 @@
                 <div class="company_name_section info_row">
                     <span class="section_name">Company</span>
                     <span class="dash_line"></span>
-                    <span class="section_value"><%= company.name %></span>
+                    {% if request.user.is_authenticated %}
+                        <span class="section_value"><%= company.name %></span>
+                    {% else %}
+                        <span class="section_value">XXX</span>
+                    {% endif %}
                 </div>
                 <div class="company_size_section info_row">
                     <span class="section_name">Size</span>
