@@ -98,10 +98,10 @@
                         </li>
                         <li><a class="blog navigate">Blog</a></li>
                         <li><div class="signup navigate">Sign up</div></li>
-						{% if request.user.is_authenticated %}
-						    <li><div class="signout navigate">Logout</div></li>
+                        {% if request.user.is_authenticated %}
+                            <li><div class="signout navigate"><a href="/account/signout">Logout</a></div></li>
                         {% else %}
-						    <li><div class="signin navigate">Login</div></li>
+                            <li><div class="signin navigate">Login</div></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -125,7 +125,6 @@
             $('.signin.navigate').click(function() {
                 $('.signin_modal_widget').show();
             });
-
 
             $('.signin_form_close_button').click(function() {
                 $('.signin_modal_widget').hide();
