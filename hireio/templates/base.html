@@ -99,9 +99,9 @@
                         <li><a class="blog navigate">Blog</a></li>
                         <li><div class="signup navigate">Sign up</div></li>
 						{% if request.user.is_authenticated %}
-						    <li><div class="signout navigate">Login out</div></li>
+						    <li><div class="signout navigate">Logout</div></li>
                         {% else %}
-						    <li><div class="signin navigate">Login in</div></li>
+						    <li><div class="signin navigate">Login</div></li>
                         {% endif %}
                     </ul>
                 </div>
