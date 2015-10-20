@@ -99,7 +99,7 @@
                         <li><a class="blog navigate">Blog</a></li>
                         <li><div class="signup navigate">Sign up</div></li>
                         {% if request.user.is_authenticated %}
-                            <li><div class="signout navigate"><a href="/account/signout">Logout</a></div></li>
+                            <li><div class="signout navigate"><a href="/account/signout" style="text-decoration: none">Logout</a></div></li>
                         {% else %}
                             <li><div class="signin navigate">Login</div></li>
                         {% endif %}
