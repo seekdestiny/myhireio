@@ -4,8 +4,8 @@ from django.http import HttpResponse
 
 from datetime import datetime
 
-from forms import CompanyForm, JobPostForm, PerksBenifitsForm
-from models import Company, JobPost
+from forms import CompanyForm, JobPostForm, PerksForm
+from models import Company, JobPost, Perks
 from account.utils import create_signup_form, create_login_form
 
 import json
@@ -143,15 +143,24 @@ def load_company_profile(request):
         company = Company.objects.get(id=company_id).serialize()
     return HttpResponse(json.dumps(company), content_type="application/json")
 
-def perks_benifits_edit_page(request):
-    perks_benifits_formset = formset_factory(PerksBenifitsForm)
-    return render(
-        request,
-        'new_position/perks_benifits.html',
-        {
-            'formset': perks_benifits_formset,
-        }
-    )
-
-def add_perks_benifits(request):
-    1
+def add_perks(request):
+    PerksFormSet = formset_factory(PerksForm)
+    if request.method == 'GET':
+        return render(
+            request,
+            'new_position/perks_benifits.html',
+            {
+                'formset': PerksFormSet,
+            }
+        )
+    else:
+        formset = PerksFormSet(request.POST)
+        for form in formset:
+            company = Company.objects.get(request.POST.get('company_id'))
+            perks = Perks(
+                title = form.cleaned_data.get('title'),
+                description = form.cleaned_data.get('description'),
+                company = company,
+            );
+            perks.save()
+            import pdb;pdb.set_trace()

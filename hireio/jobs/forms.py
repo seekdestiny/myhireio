@@ -166,7 +166,7 @@ class JobPostForm(forms.Form):
         }),
     )
 
-class PerksBenifitsForm(forms.Form):
+class PerksForm(forms.Form):
     title = forms.CharField(
         label='Title',
         max_length=30,

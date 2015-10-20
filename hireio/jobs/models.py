@@ -53,9 +53,10 @@ class JobPost(models.Model):
             'id': str(self.id),
         }
 
-class PerksBenifits(models.Model):
+class Perks(models.Model):
     title = models.CharField(max_length=30, null=False, blank=False)
     description = models.CharField(max_length=100, null=False, blank=False)
+    company = models.ForeignKey(Company)
 
     def serialze(self):
         return {

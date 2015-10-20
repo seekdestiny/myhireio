@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^load_more_companies', views.load_more_companies, name='load_more_companies'),
     url(r'^job_detail', views.job_detail, name='detail'),
     url(r'^load_company_profile', views.load_company_profile, name='load_company_profile'),
-    url(r'^perks_benifits', views.perks_benifits_edit_page, name='perks_benifits'),
+    url(r'^add_perks', views.add_perks, name='add_perks'),
 ]
