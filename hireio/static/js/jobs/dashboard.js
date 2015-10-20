@@ -30,7 +30,7 @@ _.namespace('hio.jobs.views', function(ns) {
 
         load_more_companies() {
             $.ajax({
-                url: 'http://127.0.0.1:8000/jobs/load_more_companies',
+                url: '/jobs/load_more_companies',
                 context: this,
                 type: 'GET',
                 data: {

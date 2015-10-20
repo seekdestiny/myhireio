@@ -15,16 +15,16 @@ class Company(models.Model):
     def serialize(self):
         return {
             'id': str(self.id),
-            'name': str(self.name),
-            'tag_name': str(self.tag_name),
-            'product': str(self.product),
-            'why_us': str(self.why_us),
-            'traction': str(self.traction),
-            'funding': str(self.funding),
-            'size': str(self.size),
+            'name': unicode(self.name),
+            'tag_name': unicode(self.tag_name),
+            'product': unicode(self.product),
+            'why_us': unicode(self.why_us),
+            'traction': unicode(self.traction),
+            'funding': unicode(self.funding),
+            'size': unicode(self.size),
             'last_active': self.last_active.strftime('%Y-%m-%d'),
-            'market': str(self.market),
-            'company_link': str(self.company_link),
+            'market': unicode(self.market),
+            'company_link': unicode(self.company_link),
         }
 
 class JobPost(models.Model):
@@ -41,16 +41,16 @@ class JobPost(models.Model):
 
     def serialize(self):
         return {
-            'description': str(self.description.encode('ascii', 'ignore')),
-            'requirements': str(self.requirements),
-            'skills': str(self.skills),
-            'location': str(self.location),
-            'salary': str(self.salary),
-            'equity': str(self.equity),
-            'job_type': str(self.job_type),
-            'job_title': str(self.job_title),
-            'responsibility': str(self.responsibility),
-            'id': str(self.id),
+            'description': unicode(self.description),
+            'requirements': unicode(self.requirements),
+            'skills': unicode(self.skills),
+            'location': unicode(self.location),
+            'salary': unicode(self.salary),
+            'equity': unicode(self.equity),
+            'job_type': unicode(self.job_type),
+            'job_title': unicode(self.job_title),
+            'responsibility': unicode(self.responsibility),
+            'id': unicode(self.id),
         }
 
 class Perks(models.Model):
