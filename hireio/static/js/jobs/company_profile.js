@@ -14,10 +14,10 @@ _.namespace('hio.jobs.views', function(ns) {
             return this;
         },
 
-        _render_company_profile: function(profile) {
-            this.profile = profile;
+        _render_company_profile: function(response) {
+            this.company = response.company;
             var template = _.template($('#tpl_company_profile').html());
-            this.$('#company_profile_wrapper').append(template({profile: this.profile}));
+            this.$('#company_profile_wrapper').append(template({company: this.company}));
         },
 
         _load_company_profile: function() {

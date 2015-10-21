@@ -135,13 +135,22 @@ def load_more_companies(request):
     return HttpResponse(json.dumps(companies), content_type="application/json")
 
 def load_company_profile(request):
-   if request.method == 'GET':
-    company_id = int(request.GET.get('company_id', ''))
-    if not company_id:
-        company = None
-    else:
-        company = Company.objects.get(id=company_id).serialize()
-    return HttpResponse(json.dumps(company), content_type="application/json")
+    if request.method == 'GET':
+        company_id = int(request.GET.get('company_id', ''))
+        if not company_id:
+            company = None
+            jobs_json = None
+        else:
+            company = Company.objects.get(id=company_id)
+            company_json = company.serialize()
+            jobs_json = JobPost.objects.get(company=company).serialize()
+
+        response = {
+            'company': company_json,
+            'jobs': jobs_json,
+        }
+
+        return HttpResponse(json.dumps(response), content_type="application/json")
 
 def add_perks(request):
     PerksFormSet = formset_factory(PerksForm)
