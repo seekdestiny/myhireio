@@ -155,3 +155,8 @@ def perks_benifits_edit_page(request):
 
 def add_perks_benifits(request):
     1
+
+def get_identity(request):
+    if not request.user.is_authenticated():
+       raise Http404
+    return HttpResponse(json.dumps({'identity':request.user.id}), content_type="application/json")
