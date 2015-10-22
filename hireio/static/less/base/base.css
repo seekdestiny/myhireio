@@ -61,7 +61,7 @@ a:hover {
   margin-right: 30px;
   cursor: pointer;
 }
-.hireio_wrapper .hireio_title_wrapper .navigation_section .signout, .signin:hover {
+.hireio_wrapper .hireio_title_wrapper .navigation_section .signout:hover, .signin:hover {
   border: 1px solid #cccccc;
 }
 .hireio_wrapper .hireio_title_wrapper .navigation_section .signup {
