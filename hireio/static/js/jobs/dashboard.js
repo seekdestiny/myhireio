@@ -50,12 +50,12 @@ _.namespace('hio.jobs.views', function(ns) {
                 url: 'http://127.0.0.1:8000/jobs/get_identity',
                 contentType: 'application/json',
                 success: function(data) {
-				    if (data.identity != null) {
-				        var id = $(e.currentTarget).data('company-id');
+                    if (data.identity != null) {
+                        var id = $(e.currentTarget).data('company-id');
                         hio.jobs.router.navigate('company_profile?' + 'company_id=' + id, {trigger: true});
-					} else {
+                    } else {
                         $('.signin_modal_widget').show();
-					}
+                    }
                 },
                 error: function() {
                 },
