@@ -1,8 +1,8 @@
 from django.contrib import auth
 from django.contrib.auth.models import User
-from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render
 
 from account import forms
 from account import models
