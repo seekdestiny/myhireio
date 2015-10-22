@@ -57,17 +57,15 @@ def login(request):
 
         if user is None:
             return show_login_page(request)
-
-        if user is not None and user.is_active:
+        elif user.is_active:
             auth.login(request, user)
             return HttpResponseRedirect("/jobs/")
         else:
-            return HttpResponseRedirect("landing_pages/failed.html")
+            return show_login_page(request)
         
 def logout(request):
     if request.user.is_authenticated():
         auth.logout(request)
-    #return HttpResponseRedirect(reverse('jobs.views.dashboard', args=[]))
     return HttpResponseRedirect('/jobs/')
 
 def show_login_page(request):
