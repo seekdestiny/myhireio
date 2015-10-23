@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^jobs/', include('jobs.urls')),
     url(r'^talents/', include('talents.urls')),
     url(r'^events/', include('events.urls')),
+    url(r'^admin/', include(admin.site.urls)),
 ]
 
 #if settings.DEBUG:

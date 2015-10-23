@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^job_detail', views.job_detail, name='detail'),
     url(r'^load_company_profile', views.load_company_profile, name='load_company_profile'),
     url(r'^add_perks', views.add_perks, name='add_perks'),
+    url(r'^get_identity', views.get_identity, name='get_identity'),
 ]

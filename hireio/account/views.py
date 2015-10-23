@@ -1,5 +1,7 @@
 from django.contrib import auth
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
 from account import forms
@@ -55,13 +57,16 @@ def login(request):
 
         if user is None:
             return show_login_page(request)
-
-        auth.login(request, user)
-        return render(
-            request,
-            'landing_pages/index.html',
-        )
-
+        elif user.is_active:
+            auth.login(request, user)
+            return HttpResponseRedirect("/jobs/")
+        else:
+            return show_login_page(request)
+        
+def logout(request):
+    if request.user.is_authenticated():
+        auth.logout(request)
+    return HttpResponseRedirect('/jobs/')
 
 def show_login_page(request):
     template = 'account/login.html'

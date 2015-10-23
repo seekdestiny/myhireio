@@ -175,4 +175,8 @@ def add_perks(request):
                 company = company,
             );
             perks.save()
-            import pdb;pdb.set_trace()
+
+def get_identity(request):
+    if not request.user.is_authenticated():
+        return HttpResponse(json.dumps({'identity': None}), content_type="application/json")
+    return HttpResponse(json.dumps({'identity': request.user.id}), content_type="application/json")

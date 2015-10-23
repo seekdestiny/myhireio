@@ -46,8 +46,21 @@ _.namespace('hio.jobs.views', function(ns) {
         },
 
         show_company_profile: function(e) {
-            var id = $(e.currentTarget).data('company-id');
-            hio.jobs.router.navigate('company_profile?' + 'company_id=' + id, {trigger: true});
+            $.ajax({
+                url: '/jobs/get_identity',
+                contentType: 'application/json',
+                success: function(data) {
+                    if (data.identity != null) {
+                        var id = $(e.currentTarget).data('company-id');
+                        hio.jobs.router.navigate('company_profile?' + 'company_id=' + id, {trigger: true});
+                    } else {
+                        $('.signin_modal_widget').show();
+                    }
+                },
+                error: function() {
+                },
+                timeout: 3000
+            });
         }
     });
 });
