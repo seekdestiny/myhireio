@@ -47,7 +47,7 @@ _.namespace('hio.jobs.views', function(ns) {
 
         show_company_profile: function(e) {
             $.ajax({
-                url: 'http://127.0.0.1:8000/jobs/get_identity',
+                url: '/jobs/get_identity',
                 contentType: 'application/json',
                 success: function(data) {
                     if (data.identity != null) {
