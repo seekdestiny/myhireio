@@ -2,6 +2,10 @@ _.namespace('hio.jobs.views', function(ns) {
     'use strict';
 
     ns.CompanyProfile = hio.base.hio_base_view.extend({
+        events: {
+            'click .company_profile_open_positions_position_table .table_row:not(:first)': 'show_job_detail'
+        },
+
         initialize: function(options) {
             this.company_id = options.company_id;
         },
@@ -15,12 +19,12 @@ _.namespace('hio.jobs.views', function(ns) {
         },
 
         _render_company_profile: function(response) {
-            this.company = response.company;
-            this.jobs = response.jobs;
+            hio.jobs.global.data.company = response.company;
+            hio.jobs.global.data.jobs = response.jobs;
             var template = _.template($('#tpl_company_profile').html());
             this.$('#company_profile_wrapper').append(template({
-                company: this.company,
-                jobs: this.jobs
+                company: response.company,
+                jobs: response.jobs
             }));
         },
 
@@ -39,6 +43,12 @@ _.namespace('hio.jobs.views', function(ns) {
                 },
                 timeout: 3000
             });
+        },
+
+        show_job_detail: function(event) {
+            var id = $(event.currentTarget).find('.position_id_column').text();
+            debugger;
+            hio.jobs.router.navigate('job_detail?' + 'job_id=' + id, {trigger: true});
         }
     });
 

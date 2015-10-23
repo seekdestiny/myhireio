@@ -17,9 +17,10 @@
         ],
 
         "jobs": [
-            "js/jobs/bootstrap.js",
             "js/jobs/dashboard.js",
-            "js/jobs/company_profile.js"
+            "js/jobs/company_profile.js",
+            "js/jobs/job_detail.js",
+            "js/jobs/bootstrap.js"
         ],
 
         "talents": [

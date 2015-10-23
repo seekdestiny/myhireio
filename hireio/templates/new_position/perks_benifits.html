@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% load loader %}
+{% endblock %}
+
+{% block body %}
+    <form id="add_perks_benifits" method="post" action="add_perks_benifits">
+        {% csrf_token %}
+        {{ formset.management_form }}
+        <div class="form_section">
+        {% for form in formset %}
+            <div class="form">
+                <p>
+                    {{ form.title.label_tag }}<br/>
+                    {{ form.title }}
+                    {% for error in form.title.errors %}<span class="error">{{ error }}</span>{% endfor %}
+                </p>
+                <p>
+                    {{ form.description.label_tag }}<br/>
+                    {{ form.description }}
+                    {% for error in form.description.errors %}<span class="error">{{ error }}</span>{% endfor %}
+                </p>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="add_additional_form_button">Add more</div>
+        <input type="submit" value="Next">
+    </form>
+
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            $('.add_additional_form_button').click(function() {
+                var total_form_count = parseInt($('#id_form-TOTAL_FORMS').val(), 10) + 1;
+                if (total_form_count > 6) return;
+                $('#id_form-TOTAL_FORMS').val(total_form_count);
+                $form_section = $('.form_section');
+                $form = $('.form').last().clone();
+                $form.find('label').each(function() {
+                    var newFor = $(this).attr('for').replace('-' + (total_form_count-2) + '-','-' + total_form_count-1 + '-');
+                    $(this).attr('for', newFor);
+                });
+                $form.find('input').each(function() {
+                    var name = $(this).attr('name').replace('-' + (total_form_count-2) + '-','-' + total_form_count-1 + '-');
+                    var id = 'id_' + name;
+                    $(this).attr({'name': name, 'id': id}).val('').removeAttr('checked');
+                });
+                $form_section.append($form);
+            });
+
+
+        });
+    </script>
+{% endblock %}
