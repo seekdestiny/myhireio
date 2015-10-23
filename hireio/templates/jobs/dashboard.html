@@ -190,16 +190,13 @@
                                 <th class="position_title_column table_column">Position Title</th>
                                 <th class="position_location_column table_column">Location</th>
                             </tr>
-                            <tr class="table_row">
-                                <td class="position_id_column table_column">00001</th>
-                                <td class="position_title_column table_column">Retention Specialist</th>
-                                <td class="position_location_column table_column">Guang Zhou, China</th>
-                            </tr>
-                            <tr class="table_row">
-                                <td class="position_id_column table_column">00002</th>
-                                <td class="position_title_column table_column">Retention Specialist</th>
-                                <td class="position_location_column table_column">Guang Zhou, China</th>
-                            </tr>
+                            <% _.each(jobs, function(job) { %>
+                                <tr class="table_row">
+                                    <td class="position_id_column table_column"><%= job.id %></th>
+                                    <td class="position_title_column table_column"><%= job.job_title %></th>
+                                    <td class="position_location_column table_column"><%= job.location %></th>
+                                </tr>
+                            <% }) %>
                         </table>
                     </div>
                 </div>

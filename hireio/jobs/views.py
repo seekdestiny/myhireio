@@ -143,7 +143,10 @@ def load_company_profile(request):
         else:
             company = Company.objects.get(id=company_id)
             company_json = company.serialize()
-            jobs_json = JobPost.objects.get(company=company).serialize()
+            jobs = JobPost.objects.filter(company=company)
+            jobs_json = {}
+            for job in jobs:
+                jobs_json[job.id] = job.serialize()
 
         response = {
             'company': company_json,
